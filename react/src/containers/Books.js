@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 
 class Books extends Component {
   componentDidMount() {
-
+    // debugger;
+    // console.log(this.props.user.user.id)
   }
 
   render() {
@@ -17,7 +18,8 @@ class Books extends Component {
 
 let mapStateToProps = state => {
   return {
-    user: state.user
+    user: state.user,
+    books: state.books
   }
 }
 

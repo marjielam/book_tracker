@@ -1,14 +1,7 @@
-const initialState = {
-  user: null
-}
-
-function user(state = initialState, action) {
+function user(state = null, action) {
   switch(action.type) {
     case 'GET_CURRENT_USER':
-      let newState = {
-        user: action.user
-      };
-      return Object.assign({}, newState);
+      return action.user;
     default:
       return state;
   }

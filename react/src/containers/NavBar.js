@@ -5,10 +5,12 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getCurrentUser } from '../actions/user';
+import { getBooks } from '../actions/books';
 
 class NavBar extends Component {
   componentWillMount() {
     this.props.getCurrentUser(this.props.route.currentUserId);
+    this.props.getBooks(this.props.route.currentUserId);
   }
 
   render() {
@@ -35,6 +37,9 @@ let mapDispatchToProps = dispatch => {
   return {
     getCurrentUser: (currentUserId) => {
       dispatch(getCurrentUser(currentUserId));
+    },
+    getBooks: (currentUserId) => {
+      dispatch(getBooks(currentUserId));
     }
   }
 }
