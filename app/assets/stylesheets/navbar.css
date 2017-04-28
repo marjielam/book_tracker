@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+
+.navbar a {
+  font-family: Baloo;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}

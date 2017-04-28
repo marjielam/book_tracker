@@ -10,20 +10,22 @@ import store, { history } from './store';
 import Books from './containers/Books';
 import NavBar from './containers/NavBar';
 
-const router = (
-  <Provider store={store}>
-    <Router history={history}>
-      <Route path="/" component={NavBar}>
-        <IndexRoute component={Books}></IndexRoute>
-      </Route>
-    </Router>
-  </Provider>
-);
-
-if (document.getElementById('current-user-id')) {
-
-}
-
 $(function() {
+  let currentUserId;
+
+  if (document.getElementById('current-user-id')) {
+    currentUserId = parseInt(document.getElementById('current-user-id').value);
+  }
+
+  const router = (
+    <Provider store={store}>
+      <Router history={history}>
+        <Route path="/" component={NavBar} currentUserId={currentUserId}>
+          <IndexRoute component={Books}></IndexRoute>
+        </Route>
+      </Router>
+    </Provider>
+  );
+
   render(router, document.getElementById('app'));
 });
