@@ -2,16 +2,23 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Book from '../components/Book';
 
 class Books extends Component {
-  componentDidMount() {
-    // debugger;
-    // console.log(this.props.user.user.id)
-  }
-
   render() {
+    let books;
+    if (this.props.books.length > 0) {
+      books = this.props.books.map((book, i) => {
+        return (
+          <Book
+          key={i}
+          book={book}
+          />
+        );
+      });
+    }
     return (
-      <div>Books!</div>
+      <div>{books}</div>
     );
   }
 }
