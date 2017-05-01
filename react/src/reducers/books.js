@@ -1,0 +1,11 @@
+function books(state = [], action) {
+  switch(action.type) {
+    case 'GET_BOOKS':
+      return action.books;
+    default:
+      return state;
+  }
+  return state;
+}
+
+export default books;
