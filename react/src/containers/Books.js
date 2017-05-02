@@ -3,8 +3,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import BookForm from '../components/BookForm';
+import { addBook } from '../actions/books';
+
 
 class Books extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmitBook = this.handleSubmitBook.bind(this);
+  }
+
+  handleSubmitBook(e) {
+    e.preventDefault();
+    this.props.addBook(this.props.route.currentUserId);
+  }
+
   render() {
     let books;
     if (this.props.books.length > 0) {
@@ -18,7 +31,12 @@ class Books extends Component {
       });
     }
     return (
-      <div>{books}</div>
+      <div>
+        {books}
+        <BookForm
+        handleSubmitBook={this.handleSubmitBook}
+        />
+      </div>
     );
   }
 }
@@ -32,8 +50,8 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = dispatch => {
   return {
-    getBooks: () => {
-      dispatch(getBooks());
+    addBook: (currentUserId) => {
+      dispatch(addBook(currentUserId));
     }
   }
 }

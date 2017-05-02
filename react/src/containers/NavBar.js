@@ -17,7 +17,7 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <h1>
-          <Link to="/">Book Tracker</Link>
+          <Link to="/">&#128214; Book Tracker 	&#128218;</Link>
         </h1>
         { React.cloneElement(this.props.children, this.props) }
       </div>
@@ -32,7 +32,6 @@ let mapStateToProps = state => {
   }
 }
 
-// switch this back to the other syntax so I can fetch the entire user
 let mapDispatchToProps = dispatch => {
   return {
     getCurrentUser: (currentUserId) => {
