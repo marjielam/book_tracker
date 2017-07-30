@@ -1,3 +1,5 @@
 <div id="app">
-  <input type="hidden" id="current-user-id" value="<%= current_user.id %>" />
+  <% if current_user %>
+    <input type="hidden" id="current-user-id" value="<%= current_user.id %>" />
+  <% end %>
 </div>

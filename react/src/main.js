@@ -20,7 +20,8 @@ $(function() {
   const router = (
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={NavBar} currentUserId={currentUserId}>
+        
+        <Route path="/" currentUserId={currentUserId}>
           <IndexRoute component={Books}></IndexRoute>
         </Route>
       </Router>

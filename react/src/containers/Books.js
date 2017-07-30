@@ -32,10 +32,10 @@ class Books extends Component {
     }
     return (
       <div>
-        {books}
         <BookForm
         handleSubmitBook={this.handleSubmitBook}
         />
+        {books}
       </div>
     );
   }

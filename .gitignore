@@ -20,3 +20,5 @@
 .env
 /app/assets/javascripts/bundle.js
 /react/coverage
+
+*.DS_Store
