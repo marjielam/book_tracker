@@ -17,7 +17,7 @@ class NavBar extends Component {
     return (
       <div className="navbar">
         <h1>
-          <Link to="/">&#128214; Book Tracker 	&#128218;</Link>
+          <Link to="/">BOOKTRACKER</Link>
         </h1>
         { React.cloneElement(this.props.children, this.props) }
       </div>

@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Baloo");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 
 .navbar a {
-  font-family: Baloo;
-  font-size: 1.5em;
+  font-family: Abril Fatface;
+  font-size: 40px;
   text-decoration: none;
   color: black;
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
 }
