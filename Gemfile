@@ -19,6 +19,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'launchy', require: false
   gem 'pry-rails'
+  gem 'rb-readline'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
